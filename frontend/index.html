@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Field Shift turns NASA Earth observations and local farm context into explainable crop rotation options." />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('field-shift-theme-v4-amoled');
+        document.documentElement.dataset.theme = savedTheme === 'light' ? 'light' : 'dark';
+      } catch (_) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <title>Field Shift — Farm intelligence</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
