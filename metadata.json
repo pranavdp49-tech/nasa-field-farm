@@ -1,0 +1,8 @@
+{
+  "name": "Field Shift",
+  "description": "Turns NASA Earth observations and local farm context into explainable crop rotation options.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

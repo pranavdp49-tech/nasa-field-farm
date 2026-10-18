@@ -53,6 +53,21 @@ export interface ClimateData {
   daily: { date: string; t2m: number | null; t2m_max: number | null; t2m_min: number | null; prectotcorr: number | null }[]
   limitations: string[]
   cache?: 'hit' | 'miss'
+  nasa_messages?: string[]
+}
+
+export interface CropInfo {
+  name: string
+  family: string
+  rainfall_mm: [number, number]
+  temp_c: [number, number]
+  ph: [number, number]
+  water: number
+  legume: boolean
+  cover: number
+  budget: number
+  season: string
+  notes: string
 }
 
 export interface Rotation {
@@ -64,7 +79,13 @@ export interface Rotation {
   score: number
   score_label: string
   confidence: string
-  components: Record<string, number>
+  components: {
+    climate: number
+    water: number
+    soil: number
+    diversity: number
+    budget: number
+  }
   crops_detail: { id: string; name: string; family: string; season: string; notes: string; water: number }[]
   reasons: string[]
   risks: string[]
@@ -74,5 +95,6 @@ export interface RecommendationData {
   ranked_rotations: Rotation[]
   method: string
   weights: Record<string, number>
+  crop_database_version: string
   data_gaps: string[]
 }
