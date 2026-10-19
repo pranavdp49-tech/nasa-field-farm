@@ -58,3 +58,7 @@ npm run build
 - `GET /api/climate?latitude=...&longitude=...&start_date=YYYY-MM-DD&end_date=YYYY-MM-DD` — Normalized NASA POWER daily climate data, monthly aggregations, and annual precipitation records.
 - `POST /api/recommendations` — Heuristic rotation ranking with component scores, reasons, and risks.
 - `POST /api/report` — Generates a downloadable PDF report.
+
+## TO USE THIS WEBSITE
+
+run start-field-shift.bat 
